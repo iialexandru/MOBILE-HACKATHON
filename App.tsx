@@ -71,6 +71,8 @@ export default function App() {
           const result = await axios.post(`${uri}/api-hkt/child/update-geo/${Application.androidId}`, { lat, lng })
                                   .then(res => res.data)
                                   .catch(err => err)
+
+          console.log(result.response)
         })();
       }, 10000)
     }
